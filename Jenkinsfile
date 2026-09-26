@@ -6,8 +6,11 @@ pipeline {
             steps {
                 echo '===== Jenkins Day 3 Test ====='
                 echo 'Testing application...'
+
                 sh 'test -f test.sh'
                 echo 'test.sh exists'
+
+                sh 'chmod +x test.sh'
                 sh './test.sh'
             }
         }
